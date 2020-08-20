@@ -10,4 +10,10 @@
     <string name="fragment_start_button_start">Iniciar</string>
     <string name="fragment_start_button_send">Enviar</string>
 
+    <string name="fragment_game_won_text">Acertou Mizerávi !!</string>
+    <string name="fragment_game_error_text">Errouu, tente novamente !</string>
+    <string name="fragment_game_won_button">Próxima Questão</string>
+    <string name="fragment_img_title">Image %s</string>
+
+
 </resources>

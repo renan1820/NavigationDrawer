@@ -11,4 +11,9 @@
     <string name="fragment_start_button_start">Start</string>
     <string name="fragment_start_button_send">Submit</string>
 
+    <string name="fragment_game_won_text">Congratulations</string>
+    <string name="fragment_game_error_text">Try again</string>
+    <string name="fragment_game_won_button">Next Match</string>
+    <string name="fragment_img_title">Image %s</string>
+
 </resources>

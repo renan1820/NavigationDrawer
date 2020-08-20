@@ -54,12 +54,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_github"
+        android:contentDescription="@string/fragment_img_title"
 
         app:layout_constraintEnd_toStartOf="@id/button_git"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_description"
         app:layout_constraintBottom_toBottomOf="parent"
+
         />
 
     <Button
@@ -80,12 +82,13 @@
 
 
     <ImageView
-        android:id="@+id/img_backgournd"
+        android:id="@+id/img_background"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:src="@drawable/ic_github"
         android:alpha=".05"
         android:scaleType="fitCenter"
+        android:contentDescription="@string/fragment_img_title"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -13,6 +13,7 @@
         android:adjustViewBounds="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/fragment_img_title"
         />
 
 
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fragment_start_button_start"
         android:background="@android:color/transparent"
+        android:textColor="@color/buttonNext"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_title"
