@@ -43,8 +43,7 @@
         android:text="@string/fragment_about_text_description"
         android:textAlignment="center"
         android:textColor="@color/textColorDefault"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="18sp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

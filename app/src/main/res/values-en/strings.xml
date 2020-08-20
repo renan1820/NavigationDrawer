@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NavigationDrawer</string>
+
+    <string name="fragment_about_text_title">Renan Castro</string>
+    <string name="fragment_about_text_description">Hellow i am  Dev Android, i hope you enjoyed this project and served to learning, come check out more on my gitHub</string>
+    <string name="fragment_about_git">GitHub</string>
+
+    <string name="fragment_rules_text_rules">Select the answer from the options given. Each time you get an answer correct, you advance to the next question.\n\nIf you get the answer wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.</string>
+
+    <string name="fragment_start_button_start">Start</string>
+    <string name="fragment_start_button_send">Submit</string>
+
+</resources>

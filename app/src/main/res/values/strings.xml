@@ -5,4 +5,9 @@
     <string name="fragment_about_text_description">Olá sou Dev Android, espero que tenha gostado do projeto, que tenha servido como um auxilio para seu aprendizado venha conferir mais no meu gitHub</string>
     <string name="fragment_about_git">GitHub</string>
 
+    <string name="fragment_rules_text_rules">Selecione a resposta correta entre as opçãoes. A cada resposta correta você avança para a próxima.\n\n Se voce escolher a reposta errada o jogo irá acabar! Você pode retornar ao titulo usando o botao voltar e com isso o jogo acaba.</string>
+
+    <string name="fragment_start_button_start">Iniciar</string>
+    <string name="fragment_start_button_send">Enviar</string>
+
 </resources>
