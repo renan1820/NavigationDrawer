@@ -11,10 +11,72 @@
     <string name="fragment_start_button_send">Enviar</string>
 
     <string name="fragment_game_won_text">Acertou Mizerávi !!</string>
+    <string name="fragment_game_error_snackbar">Escolha alguma das opções</string>
     <string name="fragment_game_error_text">Errouu, tente novamente !</string>
     <string name="fragment_game_won_button">Próxima Questão</string>
     <string name="fragment_game_title_appbar">Questão (%1$d/%2$d)</string>
     <string name="fragment_img_title">Image %s</string>
+
+<!--    Questões-->
+    <string name="question_one">Melhor jogo em andamento pelo TGA 2019</string>
+    <string name="question_one_option_1">Raindow Six Siegue</string>
+    <string name="question_one_option_2">Fortnite</string>
+    <string name="question_one_option_3">"League of Legends</string>
+    <string name="question_one_option_4">Dota 2</string>
+
+    <string name="question_two">Melhor jogo em andamento pelo TGA 2019</string>
+    <string name="question_two_option_1">Smite</string>
+    <string name="question_two_option_2">Dota 2</string>
+    <string name="question_two_option_3">League of Legends</string>
+    <string name="question_two_option_4">"Counter Strike: Global Offensive</string>
+
+    <string name="question_three">Jogo do ano pelo The Game Awards 2018</string>
+    <string name="question_three_option_1">Fortnite</string>
+    <string name="question_three_option_2">Red Dead Redemption 2</string>
+    <string name="question_three_option_3">God of War</string>
+    <string name="question_three_option_4">Celeste</string>
+
+    <string name="question_four">Jogo do ano pelo TGA 2019</string>
+    <string name="question_four_option_1">Sekiro: Shadows Die Twice</string>
+    <string name="question_four_option_2">Death Stranding</string>
+    <string name="question_four_option_3">Call of Duty: Modern Warfare</string>
+    <string name="question_four_option_4">Gris</string>
+
+    <string name="question_five">Jogo mais lucrativo da história</string>
+    <string name="question_five_option_1">God of War</string>
+    <string name="question_five_option_2">GTA V</string>
+    <string name="question_five_option_3">League of Legends</string>
+    <string name="question_five_option_4">Red Dead Redemption 2</string>
+
+    <string name="question_six">Qual é o jogo que não é da Rockstar Games?</string>
+    <string name="question_six_option_1">Max Payne 3</string>
+    <string name="question_six_option_2">L.A. Noire</string>
+    <string name="question_six_option_3">Maple Story</string>
+    <string name="question_six_option_4">Grand Theft Auto V</string>
+
+    <string name="question_seven">Qual é o jogo de PC mais jogado do mundo em 2019?</string>
+    <string name="question_seven_option_1">Raindow Six Siegue</string>
+    <string name="question_seven_option_2">Fortnite</string>
+    <string name="question_seven_option_3">League of Legends</string>
+    <string name="question_seven_option_4">Minecraft</string>
+
+    <string name="question_eight">Melhor trilha sonora pelo The Game Awards 2018</string>
+    <string name="question_eight_option_1">Red Dead Redemption 2</string>
+    <string name="question_eight_option_2">Forza Horizon 4</string>
+    <string name="question_eight_option_3">God of War</string>
+    <string name="question_eight_option_4">Fortnite</string>
+
+    <string name="question_nine">Melhor direção de jogo pelo The Game Awards 2018</string>
+    <string name="question_nine_option_1">Red Dead Redemption 2</string>
+    <string name="question_nine_option_2">Forza Horizon 4</string>
+    <string name="question_nine_option_3">God of War</string>
+    <string name="question_nine_option_4">Fortnite</string>
+
+    <string name="question_ten">Melhor trabalho de áudio pelo The Game Awards 2019</string>
+    <string name="question_ten_option_1">Disco Elysium</string>
+    <string name="question_ten_option_2">Luigi’s Mansion 3</string>
+    <string name="question_ten_option_3">Super Smash Bros. Ultimate</string>
+    <string name="question_ten_option_4">Call of Duty: Modern Warfare</string>
 
 
 </resources>

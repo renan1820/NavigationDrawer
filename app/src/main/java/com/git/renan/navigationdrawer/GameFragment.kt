@@ -1,34 +1,27 @@
 package com.git.renan.navigationdrawer
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.git.renan.navigationdrawer.databinding.FragmentGameBinding
+import com.google.android.material.snackbar.Snackbar
 
 class GameFragment:Fragment() {
-    data class Question(val text: String, val answers: List<String>)
+    data class Question(val text: String, val answers: List<String>,val idCorrect: Int)
 
-    private val questions: MutableList<Question> = mutableListOf(
-        Question(text = "Melhor jogo em andamento pelo TGA 2019", answers = listOf("Raindow Six Siegue","Fortnite","League of Legends","Dota 2")),//2
-        Question(text = "Jogo que maior premia no e-sports", answers = listOf("Smite","Dota 2","League of Legends","Counter Strike: Global Offensive")),//2
-        Question(text = "Jogo do ano pelo The Game Awards 2018", answers = listOf("Fortnite","Red Dead Redemption 2","God of War","Celeste")),//3
-        Question(text = "Jogo do ano pelo TGA 2019", answers = listOf("Sekiro: Shadows Die Twice","Death Stranding","Call of Duty: Modern Warfare","Gris")),//1
-        Question(text = "Jogo mais lucrativo da história", answers = listOf("God of War","GTA V","League of Legends","Red Dead Redemption 2")),//4
-        Question(text = "Qual é o jogo que não é da Rockstar Games?", answers = listOf("Max Payne 3","L.A. Noire","Maple Story","Grand Theft Auto V")),//3
-        Question(text = "Qual é o jogo de PC mais jogado do mundo em 2019?", answers = listOf("Raindow Six Siegue","Dota 2","League of Legends","Minecraft")),//3
-        Question(text = "Melhor trilha sonora pelo The Game Awards 2018", answers = listOf("Red Dead Redemption 2","Forza Horizon 4","God of War","Fortnite")),//1
-        Question(text = "Melhor direção de jogo pelo The Game Awards 2018", answers = listOf("Red Dead Redemption 2","Forza Horizon 4","God of War","Fortnite")),//3
-        Question(text = "Melhor trabalho de áudio pelo The Game Awards 2019", answers = listOf("Disco Elysium","Luigi’s Mansion 3","Super Smash Bros. Ultimate","Call of Duty: Modern Warfare"))//4
-    )
+    private lateinit var questions: MutableList<Question>
 
     lateinit var currentQuestion: Question
     lateinit var answers: List<String>
+    var numQuestion: Int = 0
     private var questionIndex = 0
-    private val numQuestion = Math.min((questions.size + 1) / 2, 3)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,7 +29,7 @@ class GameFragment:Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(inflater, R.layout.fragment_game, container, false)
-
+        initQuestions()
         randomizeQuestions()
 
         binding.game = this
@@ -52,19 +45,26 @@ class GameFragment:Fragment() {
                     R.id.third_radio -> answersIndex = 2
                     R.id.four_radio -> answersIndex = 3
                 }
-                if(answers[answersIndex] == currentQuestion.answers[0]){
+
+                if(checkCorrectQuestion(questions,questionIndex,answersIndex)){
                     questionIndex++
 
                     if(questionIndex < numQuestion){
                         currentQuestion = questions[questionIndex]
+
                         setQuestion()
                         binding.invalidateAll()
                     }else{
-
+                        //Correct all Questions
+                        view.findNavController().navigate(R.id.action_gameFragment_to_gameResultFragment)
                     }
                 }else{
+                    //Error any question
+                    view.findNavController().navigate(R.id.action_gameFragment_to_gameResultFragment)
 
                 }
+            }else{
+                Snackbar.make(view,getString(R.string.fragment_game_error_snackbar), Snackbar.LENGTH_SHORT).show()
             }
         }
         return binding.root
@@ -81,6 +81,26 @@ class GameFragment:Fragment() {
         answers = currentQuestion.answers.toMutableList()
         answers.shuffled()
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.fragment_game_title_appbar, questionIndex + 1, numQuestion)
+    }
+
+    private fun checkCorrectQuestion(questions: MutableList<Question>, questionIndex: Int, chooseAnswers: Int): Boolean{
+        return chooseAnswers.equals(questions[questionIndex].idCorrect)
+    }
+    private fun initQuestions(){
+        questions = mutableListOf(
+            Question(text = getString(R.string.question_one), answers = listOf(getString(R.string.question_one_option_1),getString(R.string.question_one_option_2),getString(R.string.question_one_option_3),getString(R.string.question_one_option_4)), idCorrect = 1),
+            Question(text = getString(R.string.question_two), answers = listOf(getString(R.string.question_two_option_1),getString(R.string.question_two_option_2),getString(R.string.question_two_option_3),getString(R.string.question_two_option_4)), idCorrect = 1),
+            Question(text = getString(R.string.question_three), answers = listOf(getString(R.string.question_three_option_1),getString(R.string.question_three_option_2),getString(R.string.question_three_option_3),getString(R.string.question_three_option_4)), idCorrect = 2),
+            Question(text = getString(R.string.question_four), answers = listOf(getString(R.string.question_four_option_1),getString(R.string.question_four_option_2),getString(R.string.question_four_option_3),getString(R.string.question_four_option_4)), idCorrect = 0),
+            Question(text = getString(R.string.question_five), answers = listOf(getString(R.string.question_five_option_1),getString(R.string.question_five_option_2),getString(R.string.question_five_option_3),getString(R.string.question_five_option_4)), idCorrect = 3),
+            Question(text = getString(R.string.question_six), answers = listOf(getString(R.string.question_six_option_1),getString(R.string.question_six_option_2),getString(R.string.question_six_option_3),getString(R.string.question_six_option_4)), idCorrect = 2),
+            Question(text = getString(R.string.question_seven), answers = listOf(getString(R.string.question_seven_option_1),getString(R.string.question_seven_option_2),getString(R.string.question_seven_option_3),getString(R.string.question_seven_option_4)), idCorrect = 2),
+            Question(text = getString(R.string.question_eight), answers = listOf(getString(R.string.question_eight_option_1),getString(R.string.question_eight_option_2),getString(R.string.question_eight_option_3),getString(R.string.question_eight_option_4)), idCorrect = 0),
+            Question(text = getString(R.string.question_nine), answers = listOf(getString(R.string.question_nine_option_1),getString(R.string.question_nine_option_2),getString(R.string.question_nine_option_3),getString(R.string.question_nine_option_4)), idCorrect = 2),
+            Question(text = getString(R.string.question_ten), answers = listOf(getString(R.string.question_ten_option_1),getString(R.string.question_ten_option_2),getString(R.string.question_ten_option_3),getString(R.string.question_ten_option_4)), idCorrect = 3)
+        )
+
+        numQuestion = Math.min((questions.size + 1) / 2, 3)
     }
 
 }

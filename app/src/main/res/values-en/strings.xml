@@ -12,10 +12,71 @@
     <string name="fragment_start_button_send">Submit</string>
 
     <string name="fragment_game_won_text">Congratulations</string>
+    <string name="fragment_game_error_snackbar">Choose any options</string>
     <string name="fragment_game_error_text">Try again</string>
     <string name="fragment_game_won_button">Next Match</string>
     <string name="fragment_game_title_appbar">Question (%1$d/%2$d)</string>
     <string name="fragment_img_title">Image %s</string>
 
+<!--    Questions-->
+    <string name="question_one">Best game in progress for TGA 2019</string>
+    <string name="question_one_option_1">Raindow Six Siegue</string>
+    <string name="question_one_option_2">Fortnite</string>
+    <string name="question_one_option_3">"League of Legends</string>
+    <string name="question_one_option_4">Dota 2</string>
+
+    <string name="question_two">Game that has the biggest prize in e-sports</string>
+    <string name="question_two_option_1">Smite</string>
+    <string name="question_two_option_2">Dota 2</string>
+    <string name="question_two_option_3">League of Legends</string>
+    <string name="question_two_option_4">"Counter Strike: Global Offensive</string>
+
+    <string name="question_three">Best game of the year by The Game Awards 2018</string>
+    <string name="question_three_option_1">Fortnite</string>
+    <string name="question_three_option_2">Red Dead Redemption 2</string>
+    <string name="question_three_option_3">God of War</string>
+    <string name="question_three_option_4">Celeste</string>
+
+    <string name="question_four">Best game of the year by TGA 2019</string>
+    <string name="question_four_option_1">Sekiro: Shadows Die Twice</string>
+    <string name="question_four_option_2">Death Stranding</string>
+    <string name="question_four_option_3">Call of Duty: Modern Warfare</string>
+    <string name="question_four_option_4">Gris</string>
+
+    <string name="question_five">Most profitable game in history</string>
+    <string name="question_five_option_1">God of War</string>
+    <string name="question_five_option_2">GTA V</string>
+    <string name="question_five_option_3">League of Legends</string>
+    <string name="question_five_option_4">Red Dead Redemption 2</string>
+
+    <string name="question_six">What game is not from Rockstar Games?</string>
+    <string name="question_six_option_1">Max Payne 3</string>
+    <string name="question_six_option_2">L.A. Noire</string>
+    <string name="question_six_option_3">Maple Story</string>
+    <string name="question_six_option_4">Grand Theft Auto V</string>
+
+    <string name="question_seven">What is the most played PC game in the world in 2019?</string>
+    <string name="question_seven_option_1">Raindow Six Siegue</string>
+    <string name="question_seven_option_2">Fortnite</string>
+    <string name="question_seven_option_3">League of Legends</string>
+    <string name="question_seven_option_4">Minecraft</string>
+
+    <string name="question_eight">Best soundtrack by The Game Awards 2018</string>
+    <string name="question_eight_option_1">Red Dead Redemption 2</string>
+    <string name="question_eight_option_2">Forza Horizon 4</string>
+    <string name="question_eight_option_3">God of War</string>
+    <string name="question_eight_option_4">Fortnite</string>
+
+    <string name="question_nine">Best Game Direction at The Game Awards 2018</string>
+    <string name="question_nine_option_1">Red Dead Redemption 2</string>
+    <string name="question_nine_option_2">Forza Horizon 4</string>
+    <string name="question_nine_option_3">God of War</string>
+    <string name="question_nine_option_4">Fortnite</string>
+
+    <string name="question_ten">Best audio work for the 2019 Game Awards</string>
+    <string name="question_ten_option_1">Disco Elysium</string>
+    <string name="question_ten_option_2">Luigi’s Mansion 3</string>
+    <string name="question_ten_option_3">Super Smash Bros. Ultimate</string>
+    <string name="question_ten_option_4">Call of Duty: Modern Warfare</string>
 
 </resources>
