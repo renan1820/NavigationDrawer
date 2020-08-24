@@ -13,6 +13,7 @@
     <string name="fragment_game_won_text">Acertou Mizerávi !!</string>
     <string name="fragment_game_error_text">Errouu, tente novamente !</string>
     <string name="fragment_game_won_button">Próxima Questão</string>
+    <string name="fragment_game_title_appbar">Questão (%1$d/%2$d)</string>
     <string name="fragment_img_title">Image %s</string>
 
 
