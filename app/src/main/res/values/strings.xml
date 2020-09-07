@@ -81,5 +81,10 @@
     <string name="question_ten_option_3">Super Smash Bros. Ultimate</string>
     <string name="question_ten_option_4">Call of Duty: Modern Warfare</string>
 
+    <string name="menu_about">Sobre</string>
+    <string name="menu_rules">Regras</string>
+    <string name="fragment_rules_fragment_appbar">Regras</string>
+    <string name="fragment_about_fragment_appbar">Sobre mim</string>
+
 
 </resources>

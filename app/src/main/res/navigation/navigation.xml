@@ -49,4 +49,14 @@
             app:destination="@id/startFragment"
             app:popUpTo="@id/startFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.git.renan.navigationdrawer.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.git.renan.navigationdrawer.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>
