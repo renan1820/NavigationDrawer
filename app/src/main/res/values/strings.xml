@@ -85,6 +85,7 @@
     <string name="menu_rules">Regras</string>
     <string name="fragment_rules_fragment_appbar">Regras</string>
     <string name="fragment_about_fragment_appbar">Sobre mim</string>
+    <string name="menu_share">Compartilhar</string>
 
 
 </resources>
