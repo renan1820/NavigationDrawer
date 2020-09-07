@@ -54,13 +54,16 @@ class GameFragment:Fragment() {
 
                         setQuestion()
                         binding.invalidateAll()
+                        binding.radioGroup.clearCheck()
                     }else{
                         //Correct all Questions
-                        view.findNavController().navigate(R.id.action_gameFragment_to_gameResultFragment)
+                        updateToolbar(true)
+                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
                     }
                 }else{
                     //Error any question
-                    view.findNavController().navigate(R.id.action_gameFragment_to_gameResultFragment)
+                    updateToolbar(false)
+                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
 
                 }
             }else{
@@ -81,6 +84,11 @@ class GameFragment:Fragment() {
         answers = currentQuestion.answers.toMutableList()
         answers.shuffled()
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.fragment_game_title_appbar, questionIndex + 1, numQuestion)
+    }
+
+    private fun updateToolbar(success: Boolean){
+        (activity as AppCompatActivity).supportActionBar?.title = if(success) getString(R.string.fragment_game_title_success_appbar) else getString(R.string.fragment_game_title_fail_appbar)
+
     }
 
     private fun checkCorrectQuestion(questions: MutableList<Question>, questionIndex: Int, chooseAnswers: Int): Boolean{

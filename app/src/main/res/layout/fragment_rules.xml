@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient_rules"
     tools:context="com.git.renan.navigationdrawer.RulesFragment">
 
     <ImageView
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fragment_rules_text_rules"
         android:layout_margin="30dp"
-        android:textColor="@color/textColorDefault"
+        android:textColor="@android:color/white"
         android:fontFamily="@font/harmattan"
         android:textSize="20sp"
 
