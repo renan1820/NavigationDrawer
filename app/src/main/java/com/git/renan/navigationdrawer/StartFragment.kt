@@ -16,8 +16,9 @@ class StartFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentStartBinding>(inflater,R.layout.fragment_start,container,false)
-        binding.btContinue.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_gameFragment))
-
+        binding.btContinue.setOnClickListener{ view:View ->
+            view.findNavController().navigate(StartFragmentDirections.actionStartFragmentToGameFragment()) }
+//            Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_gameFragment))
 //            Navigation.findNavController(view).navigate(R.id.action_startFragment_to_gameFragment) // modo 1
 //            view.findNavController().navigate(R.id.action_startFragment_to_gameFragment) // modo 2
 

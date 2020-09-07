@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/gradient_rules"
-    tools:context="com.git.renan.navigationdrawer.RulesFragment">
 
-    <ImageView
-        android:id="@+id/img_title"
-        android:layout_width="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/img_title"
+    app:layout_constraintBottom_toBottomOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/rules_book"
-        android:adjustViewBounds="true"
-        android:layout_margin="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/fragment_img_title"
-        />
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.git.renan.navigationdrawer.RulesFragment">
+
+        <ImageView
+            android:id="@+id/img_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rules_book"
+            android:adjustViewBounds="true"
+            android:layout_margin="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/fragment_img_title"
+            />
+
+        <TextView
+            android:id="@+id/text_rules"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_rules_text_rules"
+            android:layout_margin="30dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/harmattan"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
 
-    <TextView
-        android:id="@+id/text_rules"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/fragment_rules_text_rules"
-        android:layout_margin="30dp"
-        android:textColor="@android:color/white"
-        android:fontFamily="@font/harmattan"
-        android:textSize="20sp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -58,13 +58,12 @@ class GameFragment:Fragment() {
                     }else{
                         //Correct all Questions
                         updateToolbar(true)
-                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
+                        view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestion,questionIndex))
                     }
                 }else{
                     //Error any question
                     updateToolbar(false)
-                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
-
+                    view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                 }
             }else{
                 Snackbar.make(view,getString(R.string.fragment_game_error_snackbar), Snackbar.LENGTH_SHORT).show()
