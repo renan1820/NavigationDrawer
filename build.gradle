@@ -5,6 +5,7 @@ buildscript {
         lottie_version = "3.4.1"
         version_navigation = '1.0.0'
         constraint_layout = '2.0.1'
+        supportlibVersion = '1.2.1'
     }
 
     repositories {
